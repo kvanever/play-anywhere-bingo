@@ -28,7 +28,6 @@ window.onload = function() {
 }
 $(document).ready(function(){
 $(".content").click(function(){
-  debugger;
- $(this).text("x")
+ $(this).toggleClass('glyphicon glyphicon-heart');
  });
 });
