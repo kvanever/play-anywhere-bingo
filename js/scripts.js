@@ -1,5 +1,6 @@
 var bingoArray = [];
 
+
 window.onload = function() {
 		var fileInput = document.getElementById('fileInput');
 		var fileDisplayArea = document.getElementById('fileDisplayArea');
@@ -9,21 +10,18 @@ window.onload = function() {
 			var textType = /text.*/;
 
 			if (file.type.match(textType)) {
-				debugger;
 				var reader = new FileReader();
 
 				reader.onload = function(e) {
-					fileDisplayArea.innerText = reader.result;
 					var string = reader.result;
 					bingoArray = string.split(/\r?\n/);
+					for (i = 1; i <= 25; i++) {
+					$(".content#" + i).text(bingoArray[Math.floor(Math.random() * bingoArray.length)])
 				}
-
+				}
 				reader.readAsText(file);
-
 			} else {
 				fileDisplayArea.innerText = "File not supported!"
 			}
-
 		});
-
 }
