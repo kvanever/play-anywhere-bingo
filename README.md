@@ -4,7 +4,7 @@
 
 ## Description
 
-This repository contains the following folders and files.  They can be used to support a basic project template for the beginning of each of your projects.
+Play Bing Anywhere is a twist to traditional Bingo. A board is generated from a list of words and players can check the boxes when they have seen or experienced the word in the box. When a player gets five in a row (horizontally, vertically or diagonally) they win! 
 
 ## Specs
 |Behavior|Input|Output|
@@ -18,11 +18,11 @@ This repository contains the following folders and files.  They can be used to s
 
 
 ## Setup/Installation Requirements
-
+Open game in browser:
 
 ## Known Bugs
 
-None.  But we haven't really tested much, so if you find anything, let us know and we'll fix it and update the repo.  
+None.
 
 ## Support and contact details
 
@@ -32,6 +32,7 @@ Come by during class if you have questions.
 
 * Bootstrap
 * JQuery
+* JavaScript
 
 ### License
 
