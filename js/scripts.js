@@ -1,10 +1,11 @@
 
 //user interface
-$(document).ready(function(){
-	$(".content").click(function(){
- 		$(this).toggleClass('glyphicon glyphicon-heart');
- 	});
-});
+$(function () {
+	$(document.body).on('click', '.content', function() {
+	 		$(this).text('glyphicon glyphicon-heart');
+	 	});
+})
+
 
 window.onload = function() {
 		var fileInput = document.getElementById('fileInput');
