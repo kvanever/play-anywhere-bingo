@@ -5,6 +5,7 @@
   width:15%;
   /*height: auto;*/
   padding-bottom:10%;
+  /*padding-left: 10%;*/
   margin:.5%;
   background-color:#e3dede;
   overflow:hidden;
@@ -13,7 +14,7 @@
   position: absolute;
   height:100%;
   width:100%;
-  font-size: 4em;
+  font-size: 5em;
   color: #ff3399;
   text-align: center;
 }
@@ -23,7 +24,7 @@ body{
 }
 
 .board{
-  padding-top: 20%
+  padding-top: 20%;
 }
 
 .jumbotron{
@@ -34,11 +35,14 @@ body{
 
 }
 h2{
-  font-family: 'Fjalla One', sans-serif;
-  color:#8283a7;
+font-family: 'Anton', sans-serif;  color:#8283a7;
+
 }
 
 .jumbotron h1{
   font-size: 70px;
 
+}
+.center{
+  padding-left: 10%;
 }

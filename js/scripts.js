@@ -1,4 +1,10 @@
-var bingoArray = [];
+
+//user interface
+$(document).ready(function(){
+	$(".content").click(function(){
+ 		$(this).toggleClass('glyphicon glyphicon-heart');
+ 	});
+});
 
 window.onload = function() {
 		var fileInput = document.getElementById('fileInput');
@@ -27,9 +33,12 @@ window.onload = function() {
 			} else {
 				fileDisplayArea.innerText = "File not supported!"
 			}
-
 		});
 }
+
+//business rules
+
+var bingoArray = [];
 
 var Square = function (string) {
 	this.string = string;
