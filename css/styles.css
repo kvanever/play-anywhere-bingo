@@ -3,13 +3,12 @@
   float :left;
   position:relative;
   width:15%;
-  /*height: auto;*/
   padding-bottom:10%;
-  /*padding-left: 10%;*/
   margin:.5%;
   background-color:#e3dede;
   overflow:hidden;
   cursor:pointer;
+  font-size:.5em;        
 }
 
 .square:hover {
