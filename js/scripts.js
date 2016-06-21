@@ -1,16 +1,21 @@
-/*This file is for your custom js.  All yours*/
+window.onload = function() {
+		var fileInput = document.getElementById('fileInput');
+		var fileDisplayArea = document.getElementById('fileDisplayArea');
 
-// Calls input from form-input.html
+		fileInput.addEventListener('change', function(e) {
+			var file = fileInput.files[0];
+			var textType = /text.*/;
 
-$(document).ready(function(){
+			if (file.type.match(textType)) {
+				var reader = new FileReader();
 
-  $("#input").submit(function(event){
-    event.preventDefault();
-    var input = ($("#blank").val());
+				reader.onload = function(e) {
+					fileDisplayArea.innerText = reader.result;
+				}
 
-    var output = "";
-
-    $('#output').text(output);
-
-  });
-});
+				reader.readAsText(file);
+			} else {
+				fileDisplayArea.innerText = "File not supported!"
+			}
+		});
+}
