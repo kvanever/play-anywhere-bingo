@@ -14,16 +14,20 @@ window.onload = function() {
 				reader.onload = function(e) {
 					var string = reader.result;
 					bingoArray = string.split(/\r?\n/);
-					for (i = 1; i <= 25; i++) {
-					$(".content#" + i).text(bingoArray[Math.floor(Math.random() * bingoArray.length)])
-				}
+					var board = new Board(5);
+					board.buildBoard();
+					for(i = 0; i < board.squares; i++) {
+						$(".board").append("<div class='row'></div>")
+						for(j = 0; j < board.squares; j++) {
+							$(".board").append("<div class='square'><div class='content' x='" + j + "' y='" + i + "'>" + board.grid[i][j].string + "</div></div>")
+						}
+					}
 				}
 				reader.readAsText(file);
 			} else {
 				fileDisplayArea.innerText = "File not supported!"
 			}
-			Board.grid.forEach
-			$(".board").append("<div class='square'><div class='content' id='1'>" + Board.grid[i][j].string + "</div></div>")
+
 		});
 }
 
@@ -41,10 +45,12 @@ var Board = function (squares) {
 
 Board.prototype.buildBoard = function() {
     var i,j;
+		var stringValue;
     for(i = 0; i < this.squares; i++){
         this.grid[i] = [];
         for(j = 0; j < this.squares; j++){
-            this.grid[i][j] = new Square(bingoArray[Math.floor(Math.random() * bingoArray.length)]);
+						stringValue = bingoArray[Math.floor(Math.random() * bingoArray.length)]
+            this.grid[i][j] = new Square(stringValue);
         }
     }
 };
