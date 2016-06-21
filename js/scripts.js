@@ -1,9 +1,11 @@
 
 //user interface
-$(document).ready(function(){
-	$(".content").click(function(){
+$(function(){
+$(document.body).on('click','.content',function(){
+	// $(".content").click(function(){
  		$(this).toggleClass('glyphicon glyphicon-heart');
- 	});
+ // 	});
+});
 });
 
 window.onload = function() {
@@ -18,8 +20,12 @@ window.onload = function() {
 				var reader = new FileReader();
 
 				reader.onload = function(e) {
+          debugger;
 					var string = reader.result;
 					bingoArray = string.split(/\r?\n/);
+          bingoArray = bingoArray.filter(function(str) {
+          return /\S/.test(str);
+        });
 					var board = new Board(5);
 					board.buildBoard();
 					for(i = 0; i < board.squares; i++) {
