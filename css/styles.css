@@ -1,10 +1,10 @@
 /*This file is for your custom css.  All yours*/
 body{
-  background-image: url(../img/img1.jpg), url(../img/cartoon-man.png);
-  background-repeat: no-repeat;
-  background-position: center,left;
-  background-attachment: fixed;
-  background-size: cover,auto;
+  background-image: url(../img/cartoon-man.png), url(../img/img1.jpg);
+  background-repeat: no-repeat, no-repeat;;
+  background-position: left, center;
+  background-attachment: fixed, fixed;
+  background-size: auto, cover;
 }
 
 .square {
@@ -90,9 +90,9 @@ h1,
 /*#bingo-man {
   background-image: url(../img/cartoon-man.png);
   background-repeat: no-repeat;
-  padding-left: -10%
+  background-position: left bottom;
   background-attachment: fixed;
   background-position: 50px 100px;
-
+  background-size: contain;
 
 }*/
