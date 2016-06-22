@@ -1,4 +1,8 @@
 /*This file is for your custom css.  All yours*/
+.board-container {
+  margin: auto;
+}
+
 .square {
   float :left;
   position:relative;
@@ -8,19 +12,20 @@
   background-color:#e3dede;
   overflow:hidden;
   cursor:pointer;
-  font-size:.5em;        
+  font-size:.5em;
 }
 
 .square:hover {
     background-color: yellow;
 }
 .content{
-  position: absolute;
+  /*position: absolute;*/
   height:100%;
   width:100%;
   font-size: 5em;
   color: #ff3399;
   text-align: center;
+
 }
 
 body{
@@ -29,7 +34,8 @@ body{
 }
 
 .board{
-  padding-top: 20%;
+  width: 90%;
+  margin-left: auto;
 }
 
 .jumbotron{
