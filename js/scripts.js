@@ -55,7 +55,8 @@ $(document).on('click','div.content', function() {
 	var diag2 = ($('#4').data('value')+$('#8').data('value')+$('#12').data('value')+$('#16').data('value')+$('#20').data('value'));
 
 	if (row1 === 5 || row2 === 5 || row3 === 5 || row4 === 5 || row5 === 5 || col1 === 5 || col2 === 5 || col3 === 5  || col4 === 5  || col5 === 5 || diag1 === 5 || diag2 === 5) {
-		alert("You win")
+		$('#myModal').modal('show')
+
 		}
 	})
 
