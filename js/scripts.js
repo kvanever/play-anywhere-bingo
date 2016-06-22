@@ -29,7 +29,7 @@ window.onload = function() {
 		})
 }
 
-$(document).on('click','div.content', function() {
+$(document).on('click','div.table-cell', function() {
 	$(this).toggleClass('glyphicon glyphicon-heart');
 	if ($(this).data('value') === 1) {
   //alert(event.target.id);

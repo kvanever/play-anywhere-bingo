@@ -19,10 +19,9 @@
   position: absolute;
   height:100%;
   width:100%;
-  font-size: 5em;
+  font-size: 10em;
   color: #ff3399;
   text-align: center;
-
 }
 
 body{
@@ -75,6 +74,7 @@ h1,
   margin: auto;
 }
 
+<<<<<<< HEAD
 .modal-dialog {
   width: 75%;
   height: 75%;
@@ -96,4 +96,16 @@ h1,
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%)
+=======
+.table{
+    display:table;
+    height:100%;
+    width:100%;
+}
+.table-cell{
+    display:table-cell;
+    vertical-align:middle;
+    height:100%;
+    width:100%;
+>>>>>>> ac8d8893b586b38418230f3fa5d07477a6ae993d
 }
