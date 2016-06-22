@@ -23,8 +23,8 @@ window.onload = function() {
 			board.buildBoard();
 
 			for(i = 0; i < Math.pow(board.squares, 2); i++) {
-				$("#" + i).text(board.grid[i].string)
-
+				$("#" + i).text(board.grid[0].string)
+				board.grid.push(board.grid.shift());
 				}
 			}
 		})
@@ -82,7 +82,7 @@ Board.prototype.buildBoard = function() {
   var i;
 	var stringValue;
   for(i = 0; i < Math.pow(this.squares, 2); i++){
-		stringValue = bingoArray[Math.floor(Math.random() * bingoArray.length)]
+		stringValue = bingoArray.splice(Math.floor(Math.random() * bingoArray.length), 1)
     this.grid[i] = new Square(stringValue);
   	}
   }
