@@ -24,6 +24,8 @@ window.onload = function() {
 				$("#" + i).text(board.grid[0].string)
 				board.grid.push(board.grid.shift());
 				}
+			$("#start-button").toggle();
+			$("#new-game").toggle();
 			}
 		})
 }
@@ -57,7 +59,7 @@ $(document).on('click','div.table-cell', function() {
 		$('#myModal').modal('show')
 
 	}
-	$("button#newGame").click(function (){
+	$("button#new-game").click(function (){
 	  $(".table-cell").text(' ');
 		$('div.table-cell').removeClass();
 	});
