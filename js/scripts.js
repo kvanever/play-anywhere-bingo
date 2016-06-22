@@ -21,16 +21,13 @@ window.onload = function() {
 
 			var board = new Board(5);
 			board.buildBoard();
-			var k = 0
-			for(i = 0; i < board.squares; i++) {
-				$(".board").append("<div class='row'></div>")
-				for(j = 0; j < board.squares; j++) {
-					$(".board").append("<div class='square'><div class='content' data-value='0' id='" + k + "'>" + board.grid[i][j].string + "</div></div>")
-					k++
+
+			for(i = 0; i < Math.pow(board.squares, 2); i++) {
+				$("#" + i).text(board.grid[i].string)
+
 				}
 			}
-		}
-	})
+		})
 }
 
 $(document).on('click','div.content', function() {
@@ -82,13 +79,10 @@ var Board = function (squares) {
 }
 
 Board.prototype.buildBoard = function() {
-    var i,j;
-		var stringValue;
-    for(i = 0; i < this.squares; i++){
-        this.grid[i] = [];
-        for(j = 0; j < this.squares; j++){
-						stringValue = bingoArray[Math.floor(Math.random() * bingoArray.length)]
-            this.grid[i][j] = new Square(stringValue);
-        }
-    }
-};
+  var i;
+	var stringValue;
+  for(i = 0; i < Math.pow(this.squares, 2); i++){
+		stringValue = bingoArray[Math.floor(Math.random() * bingoArray.length)]
+    this.grid[i] = new Square(stringValue);
+  	}
+  }
