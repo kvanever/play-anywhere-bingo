@@ -1,5 +1,11 @@
 /*This file is for your custom css.  All yours*/
-
+body{
+  background-image: url(../img/img1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .square {
   float :left;
   position:relative;
@@ -34,12 +40,6 @@ body{
   margin-left: auto;
 }
 
-.jumbotron{
-  background-color:#D8E6E7;
-  font-family: 'Indie Flower', cursive;
-  background-image: url("../img/bingo.png");
-  height:250px;
-}
 
 h2{
 font-family: 'Anton', sans-serif;  color:#8283a7;
@@ -84,4 +84,15 @@ h1,
     vertical-align:middle;
     height:100%;
     width:100%;
+}
+
+#bingo-man {
+  background-image: url(../img/cartoon-man.png);
+  background-repeat: no-repeat;
+  /*padding-left: -10%*/
+  background-position: left;
+  background-attachment: fixed;
+  background-position: 50px 100px; 
+
+
 }
