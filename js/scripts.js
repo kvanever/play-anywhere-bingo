@@ -57,8 +57,54 @@ $(document).on('click','div.table-cell', function() {
 
 	if (row1 === 5 || row2 === 5 || row3 === 5 || row4 === 5 || row5 === 5 || col1 === 5 || col2 === 5 || col3 === 5  || col4 === 5  || col5 === 5 || diag1 === 5 || diag2 === 5) {
 		$('#myModal').modal('show')
-
 	}
+	if (row1 === 5) {
+		$("#0, #1, #2, #3, #4").addClass('bingo-background');
+		$('#myModal').modal('show')
+	} else if (row2 === 5) {
+		$("#5, #6, #7, #8, #9").addClass('bingo-background');
+		$('#myModal').modal('show')
+	} else if (row3 === 5) {
+		$("#10, #11, #12, #13, #14").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+	else if (row4 === 5) {
+		$("#15, #16, #17, #18, #19").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+	else if (row5 === 5) {
+		$("#20, #21, #22, #23, #24").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+	else if (col1 === 5) {
+		$("#0, #5, #10, #15, #20").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+	else if (col2 === 5) {
+		$("#1, #6, #11, #16, #21").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+	else if (col3 === 5) {
+		$("#2, #7, #12, #17, #22").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+	else if (col4 === 5) {
+		$("#3, #8, #13, #18, #23").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+	else if (col5 === 5) {
+		$("#4, #9, #14, #19, #24").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+	else if (diag1 === 5) {
+		$("#0, #6, #12, #18, #24").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+	else if (diag2 === 5) {
+		$("#4, #8, #12, #16, #20").addClass('bingo-background');
+		$('#myModal').modal('show')
+	}
+
 	$("button#new-game").click(function (){
 	  $(".table-cell").text(' ');
 		$('div.table-cell').removeClass();

@@ -60,7 +60,9 @@ body{
   border-color: white;
   border-width: medium;
 }
-
+.bingo-background{
+  background-color: black;
+}
 body{
   font-size: 10px;
   background-color:#F8FAFF;
