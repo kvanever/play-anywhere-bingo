@@ -1,11 +1,12 @@
 /*This file is for your custom css.  All yours*/
 body{
-  background-image: url(../img/img1.jpg);
+  background-image: url(../img/img1.jpg), url(../img/cartoon-man.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center,left;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover,auto;
 }
+
 .square {
   float :left;
   position:relative;
@@ -86,13 +87,12 @@ h1,
     width:100%;
 }
 
-#bingo-man {
+/*#bingo-man {
   background-image: url(../img/cartoon-man.png);
   background-repeat: no-repeat;
-  /*padding-left: -10%*/
-  background-position: left;
+  padding-left: -10%
   background-attachment: fixed;
-  background-position: 50px 100px; 
+  background-position: 50px 100px;
 
 
-}
+}*/
