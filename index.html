@@ -30,9 +30,17 @@
     <!-- Custom JS -->
     <script src="js/scripts.js" type="text/javascript"></script>
     <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>  </head>
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    </head>
   <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Play Anywhere Bingo</h1>
+        <p>Using the form below, upload a csv file to generate a bingo card.</p>
+      </div>
+    </div>
     <div class="container">
 
       <h1 class="header">Upload a text file to play Bingo</h1>
@@ -40,7 +48,10 @@
          <div class="select">
          Select a text file:
        </div>
-        <input  type="file" id="fileInput">
+       <label class="file">
+         <input type="file" id="file-input">
+         <a class="btn btn-success btn-lg" role="button" id="start-button">Play now!</a>
+       </label>
       </div>
     </div>
 

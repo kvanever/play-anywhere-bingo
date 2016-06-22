@@ -1,10 +1,10 @@
 //user interface
 window.onload = function() {
-	var fileInput = document.getElementById('fileInput');
-	var fileDisplayArea = document.getElementById('fileDisplayArea');
+	var fileInput = document.getElementById('file-input');
+	var startButton = document.getElementById('start-button')
 
-	fileInput.addEventListener('change', function(e) {
-
+	startButton.addEventListener('click', function(e) {
+		debugger;
 		var file = fileInput.files[0];
 		var textType = /text.*/;
 		var reader = new FileReader();
