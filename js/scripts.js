@@ -4,7 +4,6 @@ window.onload = function() {
 	var startButton = document.getElementById('start-button')
 
 	startButton.addEventListener('click', function(e) {
-		debugger;
 		var file = fileInput.files[0];
 		var textType = /text.*/;
 		var reader = new FileReader();

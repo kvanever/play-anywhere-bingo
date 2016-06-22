@@ -39,16 +39,30 @@ body{
   margin-left: auto;
 }
 
-h2{
+/*h2{
 font-family: 'Anton', sans-serif;  color:#8283a7;
 
-}
+}*/
 
-.jumbotron h1{
+.jumbotron h1,
+.jumbotron p,
+ h2,
+ .text-file,
+ .select {
+  font-family: 'PT Sans', sans-serif;  color:#1f4e5f;
+  font-weight: bold;
+  text-align: center;
+  color:#1f4e5f;
+  }
+
+.jumbotron h1 {
   font-size: 7em;
-  font-family: 'Montserrat', sans-serif;
-
 }
+
+.jumbotron p {
+  font-size: 2em;
+}
+
 .jumbotron{
     background-color: rgba(31, 223, 231, .2);
     background: -webkit-linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0)); /* For Safari 5.1 to 6.0 */
@@ -56,24 +70,13 @@ font-family: 'Anton', sans-serif;  color:#8283a7;
     background: -moz-linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0)); /* Standard syntax */
 }
-}
+
 .center{
   padding-left: 10%;
 }
-.header{
-  font-size: 30px;
-  font-family: 'Candal', sans-serif;
-  color:#2E294E;
-}
 
-.text-file,
-.select {
+ {
   font-size: 1.3em;
-}
-
-h1,
-.text-file,
-.select {
   text-align: center;
 }
 
