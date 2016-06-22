@@ -1,7 +1,4 @@
 /*This file is for your custom css.  All yours*/
-.board-container {
-  margin: auto;
-}
 
 .square {
   float :left;
@@ -62,10 +59,18 @@ font-family: 'Anton', sans-serif;  color:#8283a7;
   font-family: 'Candal', sans-serif;
   color:#2E294E;
 }
-.text-file{
+
+.text-file,
+.select {
   font-size: 1.3em;
 }
 
-.select{
-  font-size: 1.3em;
+h1,
+.text-file,
+.select {
+  text-align: center;
+}
+
+#fileInput {
+  margin: auto;
 }
