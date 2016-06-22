@@ -1,7 +1,25 @@
 body{
   background:
-    url(../img/cartoon-man.png) no-repeat left fixed / 30%,
+    url(../img/cartoon-man.png) no-repeat -8em 30em,left fixed / 30%,
     url(../img/img1.jpg) no-repeat center fixed / cover;
+}
+
+.speech {
+  position: relative;
+  width: 30em;
+  height: 20em;
+  text-align: center;
+  line-height: 10em;
+  background-color: #fff;
+  border: .8em solid #666;
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  border-radius: 3em;
+  -webkit-box-shadow: .2em .2em .4em #888;
+  -moz-box-shadow: .2em .2em .4em #888;
+  box-shadow: .2em .2em .4em #888;
+  margin-top: 3em;
+  margin-left: 4em;
 }
 
 .square {
@@ -36,13 +54,9 @@ body{
 
 .board{
   width: 90%;
-  margin-left: auto;
+  margin-left: 40%;
+  margin-top: 16em;
 }
-
-/*h2{
-font-family: 'Anton', sans-serif;  color:#8283a7;
-
-}*/
 
 .jumbotron h1,
 .jumbotron p,
@@ -52,7 +66,6 @@ font-family: 'Anton', sans-serif;  color:#8283a7;
   font-family: 'PT Sans', sans-serif;  color:#1f4e5f;
   font-weight: bold;
   text-align: center;
-  color:#1f4e5f;
   }
 
 .jumbotron h1 {
