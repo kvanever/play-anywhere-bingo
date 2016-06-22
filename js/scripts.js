@@ -60,6 +60,7 @@ $(document).on('click','div.table-cell', function() {
 	}
 	$("button#newGame").click(function (){
 	  $(".table-cell").text(' ');
+		$('div.table-cell').removeClass();
 	});
 });
 
