@@ -1,9 +1,9 @@
-
-
 body{
   background:
     url(../img/cartoon-man.png) no-repeat -8em 50em,left fixed / 30%,
     url(../img/img1.jpg) no-repeat center fixed / cover;
+    font-size: 10px;
+    background-color:#F8FAFF;
 }
 
 .speech {
@@ -69,11 +69,6 @@ body{
 
 .bingo-background{
   background-color: #ffff4d;
-}
-
-body{
-  font-size: 10px;
-  background-color:#F8FAFF;
 }
 
 .board{
