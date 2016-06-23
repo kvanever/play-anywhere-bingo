@@ -1,0 +1,12 @@
+
+@media screen and (min-width: 480px) {
+    body {
+        background-color: lightgreen;
+    }
+
+    .speech {
+      width: 20%;
+      background-color: red;
+      border: 1px solid orange;
+    }
+}
