@@ -24,12 +24,13 @@ window.onload = function() {
 					board.grid.push(board.grid.shift());
 					}
 				$("#new-game").toggle();
+				$('.table-cell').addClass('clickable')
 				$("#file-input").toggle();
 			}
 		})
 }
 
-$(document).on('click','div.table-cell', function() {
+$(document).on('click','div.clickable', function() {
 	$(this).toggleClass('glyphicon glyphicon-heart');
 	if ($(this).data('value') === 1) {
 		$(this).text(board.grid[$(this).attr('id')].string);
@@ -59,59 +60,71 @@ $(document).on('click','div.table-cell', function() {
 		$("#0, #1, #2, #3, #4").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	} else if (row2 === 5) {
 		$("#5, #6, #7, #8, #9").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	} else if (row3 === 5) {
 		$("#10, #11, #12, #13, #14").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 	else if (row4 === 5) {
 		$("#15, #16, #17, #18, #19").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 	else if (row5 === 5) {
 		$("#20, #21, #22, #23, #24").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 	else if (col1 === 5) {
 		$("#0, #5, #10, #15, #20").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 	else if (col2 === 5) {
 		$("#1, #6, #11, #16, #21").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 	else if (col3 === 5) {
 		$("#2, #7, #12, #17, #22").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 	else if (col4 === 5) {
 		$("#3, #8, #13, #18, #23").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 	else if (col5 === 5) {
 		$("#4, #9, #14, #19, #24").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 	else if (diag1 === 5) {
 		$("#0, #6, #12, #18, #24").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 	else if (diag2 === 5) {
 		$("#4, #8, #12, #16, #20").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
+		$('.table-cell').removeClass('clickable')
 	}
 
 });
@@ -123,6 +136,8 @@ $(function () {
 		$("#new-game").toggle();
 		$("#file-input").toggle();
 		$('.modal').css({'z-index': '-1'})
+		$('.table-cell').addClass('clickable')
+		$('.square').removeClass('bingo-background')
 	});
 })
 
