@@ -45,6 +45,10 @@ body{
   border-radius: 4em;
 }
 
+.glyphicon {
+  font-size: 3em;
+}
+
 .square:hover {
   background-color: #ffffb3;
 }
@@ -53,7 +57,7 @@ body{
   position: absolute;
   height:100%;
   width:100%;
-  font-size: 10em;
+  font-size: 5em;
   color: #4d94ff;
   text-align: center;
 }
@@ -65,7 +69,7 @@ body{
 }
 
 .bingo-background{
-  background-color: black;
+  background-color: #ffff4d;
 }
 
 body{
