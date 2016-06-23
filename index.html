@@ -34,6 +34,7 @@
 <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 </head>
   <body>
+
     <div class="jumbotron">
       <div class="container">
         <h1>Play Anywhere Bingo</h1>
@@ -42,17 +43,36 @@
     </div>
     <div class="container">
       <div class="row">
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+              </div>
+              <div class="modal-body">
+                <p>Congratulations!
+                <img id="modalImage" src="img/bingowin.jpeg" alt="bingo win" />
+                BINGO! Load another list to play again.</p>
+
+              </div>
+
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+      </div>
+      <div class="row">
         <div class="col-md-2">
           <div class="speech">
             <h2 class="header">Upload a text file to play Bingo</h2>
             <label class="file">
               <input type="file" id="file-input">
             </label>
-            <button id="new-game" type="button" class="btn btn-success btn-lg">Reset</button>
           </div>
+          <button id="new-game" type="button" class="btn btn-success btn-lg">Reset</button>
         </div>
         <div class="col-md-10">
-          <div class ="row board">
+          <div class ="board">
             <div class="row">
               <div class="square">
                 <div class="content">
@@ -289,28 +309,13 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
 
 
-    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
-          </div>
-          <div class="modal-body">
-            <p>Congratulations!
-            <img id="modalImage" src="img/bingowin.jpeg" alt="bingo win" />
-            BINGO! Load another list to play again.</p>
-
-          </div>
-
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
   </body>
 </html>

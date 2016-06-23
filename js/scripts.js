@@ -3,7 +3,6 @@ window.onload = function() {
 	var fileInput = document.getElementById('file-input');
 
 	fileInput.addEventListener('change', function(e) {
-			debugger;
 			var file = fileInput.files[0];
 			var textType = /text.*/;
 			var reader = new FileReader();
@@ -29,6 +28,7 @@ window.onload = function() {
 			}
 		})
 }
+
 $(document).on('click','div.table-cell', function() {
 	$(this).toggleClass('glyphicon glyphicon-heart');
 	if ($(this).data('value') === 1) {
@@ -37,7 +37,6 @@ $(document).on('click','div.table-cell', function() {
 	} else {
   //alert(event.target.id);
 		$(this).data('value', 1);}
-
 
 	var row1 = ($('#0').data('value')+$('#1').data('value')+$('#2').data('value')+$('#3').data('value')+$('#4').data('value'));
 	var row2 = ($('#5').data('value')+$('#6').data('value')+$('#7').data('value')+$('#8').data('value')+$('#9').data('value'));
@@ -54,68 +53,76 @@ $(document).on('click','div.table-cell', function() {
 	var diag1 = ($('#0').data('value')+$('#6').data('value')+$('#12').data('value')+$('#18').data('value')+$('#24').data('value'));
 	var diag2 = ($('#4').data('value')+$('#8').data('value')+$('#12').data('value')+$('#16').data('value')+$('#20').data('value'));
 
-	if (row1 === 5 || row2 === 5 || row3 === 5 || row4 === 5 || row5 === 5 || col1 === 5 || col2 === 5 || col3 === 5  || col4 === 5  || col5 === 5 || diag1 === 5 || diag2 === 5) {
-		$('#myModal').modal('show')
-	}
 	if (row1 === 5) {
 		$("#0, #1, #2, #3, #4").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	} else if (row2 === 5) {
 		$("#5, #6, #7, #8, #9").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	} else if (row3 === 5) {
 		$("#10, #11, #12, #13, #14").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 	else if (row4 === 5) {
 		$("#15, #16, #17, #18, #19").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 	else if (row5 === 5) {
 		$("#20, #21, #22, #23, #24").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 	else if (col1 === 5) {
 		$("#0, #5, #10, #15, #20").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 	else if (col2 === 5) {
 		$("#1, #6, #11, #16, #21").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 	else if (col3 === 5) {
 		$("#2, #7, #12, #17, #22").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 	else if (col4 === 5) {
 		$("#3, #8, #13, #18, #23").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 	else if (col5 === 5) {
 		$("#4, #9, #14, #19, #24").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 	else if (diag1 === 5) {
 		$("#0, #6, #12, #18, #24").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 	else if (diag2 === 5) {
 		$("#4, #8, #12, #16, #20").addClass('bingo-background');
 		$('#myModal').modal('show')
+		$('.modal').css({'z-index': '5000'})
 	}
 
+});
+
+$(function () {
 	$("button#new-game").click(function (){
-		debugger;
-	  $(".table-cell").text(' ');
+		$(".table-cell").text(' ');
 		$('div.table-cell').removeClass();
 		$("#new-game").toggle();
 		$("#file-input").toggle();
+		$('.modal').css({'z-index': '-1'})
 	});
-});
-
-
-
-
+})
 
 //business rules
 

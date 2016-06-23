@@ -25,10 +25,12 @@ body{
 #new-game{
   display:none;
 }
+
 .btn{
   width: 130%;
   margin-left:-10%;
 }
+
 .square {
   float :left;
   position:relative;
@@ -46,6 +48,7 @@ body{
 .square:hover {
   background-color: #ffffb3;
 }
+
 .content{
   position: absolute;
   height:100%;
@@ -53,16 +56,18 @@ body{
   font-size: 10em;
   color: #4d94ff;
   text-align: center;
-
 }
+
 .btn-success{
   background-color:#8a1021;
   border-color: white;
   border-width: medium;
 }
+
 .bingo-background{
   background-color: black;
 }
+
 body{
   font-size: 10px;
   background-color:#F8FAFF;
@@ -104,15 +109,10 @@ body{
   padding-left: 10%;
 }
 
- {
-  font-size: 1.3em;
-  text-align: center;
-}
-
 .modal {
-  /*width: 60%;*/
+  width: 60%;
   display: block;
-    /*position: absolute;*/
+    position: absolute;
     left: 60%;
     height: 88%;
     width: 28%;
@@ -121,8 +121,8 @@ body{
     border-radius: 0px;
     font-size: 2em;
     color: blue;
+    z-index: -1;
 }
-
 
 .modal-dialog {
   width: 75%;
@@ -130,7 +130,6 @@ body{
   margin: 1 auto;
   padding: 0;
 }
-
 
 .modal-content {
   height: auto;
@@ -153,6 +152,7 @@ body{
     height:100%;
     width:100%;
 }
+
 .table-cell{
     display: table-cell;
     vertical-align:middle;
