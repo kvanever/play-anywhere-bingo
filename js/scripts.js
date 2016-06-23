@@ -1,4 +1,3 @@
-//user interface
 window.onload = function() {
 	var fileInput = document.getElementById('file-input');
 
@@ -34,12 +33,11 @@ $(document).on('click','div.clickable', function() {
 	$(this).toggleClass('glyphicon glyphicon-heart');
 	if ($(this).data('value') === 1) {
 		$(this).text(board.grid[$(this).attr('id')].string);
-  //alert(event.target.id);
 		$(this).data('value', 0);
 	} else {
 		$(this).text("");
-  //alert(event.target.id);
-		$(this).data('value', 1);}
+		$(this).data('value', 1);
+	}
 
 	var row1 = ($('#0').data('value')+$('#1').data('value')+$('#2').data('value')+$('#3').data('value')+$('#4').data('value'));
 	var row2 = ($('#5').data('value')+$('#6').data('value')+$('#7').data('value')+$('#8').data('value')+$('#9').data('value'));
@@ -71,62 +69,52 @@ $(document).on('click','div.clickable', function() {
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
-	}
-	else if (row4 === 5) {
+	}	else if (row4 === 5) {
 		$("#15, #16, #17, #18, #19").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
-	}
-	else if (row5 === 5) {
+	} else if (row5 === 5) {
 		$("#20, #21, #22, #23, #24").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
-	}
-	else if (col1 === 5) {
+	} else if (col1 === 5) {
 		$("#0, #5, #10, #15, #20").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
-	}
-	else if (col2 === 5) {
+	} else if (col2 === 5) {
 		$("#1, #6, #11, #16, #21").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
-	}
-	else if (col3 === 5) {
+	} else if (col3 === 5) {
 		$("#2, #7, #12, #17, #22").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
-	}
-	else if (col4 === 5) {
+	} else if (col4 === 5) {
 		$("#3, #8, #13, #18, #23").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
-	}
-	else if (col5 === 5) {
+	} else if (col5 === 5) {
 		$("#4, #9, #14, #19, #24").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
-	}
-	else if (diag1 === 5) {
+	} else if (diag1 === 5) {
 		$("#0, #6, #12, #18, #24").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
-	}
-	else if (diag2 === 5) {
+	} else if (diag2 === 5) {
 		$("#4, #8, #12, #16, #20").parent().parent().parent().addClass('bingo-background');
 		$('#myModal').modal('show')
 		$('.modal').css({'z-index': '5000'})
 		$('.table-cell').removeClass('clickable')
 	}
-
 });
 
 $(function () {
@@ -141,8 +129,6 @@ $(function () {
 	});
 })
 
-//business rules
-
 var bingoArray = [];
 var board;
 
@@ -150,8 +136,6 @@ var Square = function (string) {
 	this.string = string;
 	this.marked = false;
 }
-
-// Board constructor - 5 uares makes Bingo
 
 var Board = function (squares) {
 	this.squares = squares;

@@ -1,9 +1,38 @@
 body{
   background:
     url(../img/cartoon-man.png) no-repeat -8em 50em,left fixed / 30%,
-    url(../img/img1.jpg) no-repeat center fixed / cover;
+    url(../img/blue-background.jpg) no-repeat center fixed / cover;
     font-size: 10px;
     background-color:#F8FAFF;
+}
+
+.jumbotron h1,
+.jumbotron p,
+ h2,
+ .text-file,
+ .select,
+ .lead {
+  font-family: 'PT Sans', sans-serif;  color:#1f4e5f;
+  font-weight: bold;
+  text-align: center;
+  }
+
+.jumbotron h1 {
+  font-size: 7em;
+}
+
+.jumbotron p {
+  font-size: 2em;
+}
+
+.jumbotron {
+  background-color: rgba(31, 223, 231, .2);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: -webkit-linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0));
+  background: -o-linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0));
+  background: -moz-linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0));
+  background: linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0));
 }
 
 .speech {
@@ -25,8 +54,25 @@ body{
   margin-bottom: 1.5em;
 }
 
+.header {
+  margin: .2em;
+}
+
 #new-game{
   display:none;
+}
+
+.btn-success{
+  background-color:#8a1021;
+  border-color: white;
+  border-width: medium;
+  width: 8em;
+}
+
+.board{
+  width: 100%;
+  margin-left: 20%;
+  margin-top: .3%;
 }
 
 .square {
@@ -60,57 +106,6 @@ body{
   text-align: center;
 }
 
-.btn-success{
-  background-color:#8a1021;
-  border-color: white;
-  border-width: medium;
-  width: 8em;
-}
-
-.bingo-background{
-  background-color: #ffff4d;
-}
-
-.board{
-  width: 100%;
-  margin-left: 20%;
-  margin-top: .3%;
-}
-
-.jumbotron h1,
-.jumbotron p,
- h2,
- .text-file,
- .select,
- .lead {
-  font-family: 'PT Sans', sans-serif;  color:#1f4e5f;
-  font-weight: bold;
-  text-align: center;
-  }
-
-.jumbotron h1 {
-  font-size: 7em;
-}
-
-.jumbotron p {
-  font-size: 2em;
-}
-
-.jumbotron {
-  background-color: rgba(31, 223, 231, .2);
-  /*background-image: url("../img/bingo-bar.jpeg");*/
-  background-size: cover;
-  background-repeat: no-repeat;
-  background: -webkit-linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(31, 223, 231, 1), rgba(31, 223, 231, 0)); /* Standard syntax */
-}
-
-.center {
-  padding-left: 10%;
-}
-
 .table {
     display: table;
     height:100%;
@@ -124,10 +119,6 @@ body{
     width:100%;
 }
 
-.invisible-text {
-  color: transparent;
-}
-
-.header {
-  margin: .2em;
+.bingo-background{
+  background-color: #ffff4d;
 }
