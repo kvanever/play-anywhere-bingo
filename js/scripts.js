@@ -16,6 +16,7 @@ window.onload = function() {
 	      return /\S/.test(str);
 	    		})
 
+				board = new Board(5)
 				board.buildBoard();
 
 				for(i = 0; i < Math.pow(board.squares, 2); i++) {
@@ -128,7 +129,7 @@ $(function () {
 //business rules
 
 var bingoArray = [];
-var board = new Board(5);
+var board;
 
 var Square = function (string) {
 	this.string = string;
