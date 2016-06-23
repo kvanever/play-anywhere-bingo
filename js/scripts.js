@@ -2,31 +2,31 @@ window.onload = function() {
 	var fileInput = document.getElementById('file-input');
 
 	fileInput.addEventListener('change', function(e) {
-			var file = fileInput.files[0];
-			var textType = /text.*/;
-			var reader = new FileReader();
-			reader.readAsText(file);
+		var file = fileInput.files[0];
+		var textType = /text.*/;
+		var reader = new FileReader();
+		reader.readAsText(file);
 
-			reader.onload = function(e) {
-				var string = reader.result;
-				bingoArray = string.split(/\r?\n/);
+		reader.onload = function(e) {
+			var string = reader.result;
+			bingoArray = string.split(/\r?\n/);
 
-	      bingoArray = bingoArray.filter(function(str) {
-	      return /\S/.test(str);
-	    		})
+      bingoArray = bingoArray.filter(function(str) {
+      return /\S/.test(str);
+    		})
 
-				board = new Board(5)
-				board.buildBoard();
+			board = new Board(5)
+			board.buildBoard();
 
-				for(i = 0; i < Math.pow(board.squares, 2); i++) {
-					$("#" + i).text(board.grid[0].string)
-					board.grid.push(board.grid.shift());
-					}
-				$("#new-game").toggle();
-				$('.table-cell').addClass('clickable')
-				$("#file-input").toggle();
-			}
-		})
+			for(i = 0; i < Math.pow(board.squares, 2); i++) {
+				$("#" + i).text(board.grid[0].string)
+				board.grid.push(board.grid.shift());
+				}
+			$("#new-game").toggle();
+			$('.table-cell').addClass('clickable')
+			$("#file-input").toggle();
+		}
+	})
 }
 
 $(document).on('click','div.clickable', function() {
@@ -119,12 +119,13 @@ $(document).on('click','div.clickable', function() {
 
 $(function () {
 	$("button#new-game").click(function (){
-		$(".table-cell").text(' ');
-		$('div.table-cell').removeClass();
+		$(".table-cell").empty();
 		$("#new-game").toggle();
 		$("#file-input").toggle();
 		$('.modal').css({'z-index': '-1'})
 		$('.table-cell').addClass('clickable')
+		$('.clickable').data('value', 0)
+		$('.table-cell').removeClass('glyphicon glyphicon-heart')
 		$('.square').removeClass('bingo-background')
 	});
 })
