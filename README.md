@@ -15,15 +15,13 @@ Play Bing Anywhere is a twist to traditional Bingo. A board is generated from a 
 |A player can mark squares as found|click on square|mark square with heart glyphicon|
 |A player wins|have five squares (horizontally, vertically, diagonally)|-mark square with heart glyphicon<br>-modal window pops up with congratulations message<br>-winning combination is highlighted<br>-board is no longer clickable|
 
-
-
 ## Setup/Installation Requirements
 
 Open game in browser.
 
 ## Known Bugs
 
-Reset button does not work.
+None.  
 
 ## Support and contact details
 
