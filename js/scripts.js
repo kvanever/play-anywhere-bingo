@@ -16,7 +16,6 @@ window.onload = function() {
 	      return /\S/.test(str);
 	    		})
 
-				var board = new Board(5);
 				board.buildBoard();
 
 				for(i = 0; i < Math.pow(board.squares, 2); i++) {
@@ -32,9 +31,11 @@ window.onload = function() {
 $(document).on('click','div.table-cell', function() {
 	$(this).toggleClass('glyphicon glyphicon-heart');
 	if ($(this).data('value') === 1) {
+		$(this).text(board.grid[$(this).attr('id')].string);
   //alert(event.target.id);
 		$(this).data('value', 0);
 	} else {
+		$(this).text("");
   //alert(event.target.id);
 		$(this).data('value', 1);}
 
@@ -127,6 +128,7 @@ $(function () {
 //business rules
 
 var bingoArray = [];
+var board = new Board(5);
 
 var Square = function (string) {
 	this.string = string;
