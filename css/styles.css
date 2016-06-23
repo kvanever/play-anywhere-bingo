@@ -109,10 +109,6 @@ body{
   text-align: center;
 }
 
-#file-input {
-  display: none;
-}
-
 .modal {
   /*width: 60%;*/
   display: block;

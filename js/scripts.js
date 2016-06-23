@@ -1,35 +1,34 @@
 //user interface
 window.onload = function() {
 	var fileInput = document.getElementById('file-input');
-	var startButton = document.getElementById('start-button')
 
-	startButton.addEventListener('click', function(e) {
-		var file = fileInput.files[0];
-		var textType = /text.*/;
-		var reader = new FileReader();
-		reader.readAsText(file);
+	fileInput.addEventListener('change', function(e) {
+			debugger;
+			var file = fileInput.files[0];
+			var textType = /text.*/;
+			var reader = new FileReader();
+			reader.readAsText(file);
 
-		reader.onload = function(e) {
-			var string = reader.result;
-			bingoArray = string.split(/\r?\n/);
+			reader.onload = function(e) {
+				var string = reader.result;
+				bingoArray = string.split(/\r?\n/);
 
-      bingoArray = bingoArray.filter(function(str) {
-      return /\S/.test(str);
-    		})
+	      bingoArray = bingoArray.filter(function(str) {
+	      return /\S/.test(str);
+	    		})
 
-			var board = new Board(5);
-			board.buildBoard();
+				var board = new Board(5);
+				board.buildBoard();
 
-			for(i = 0; i < Math.pow(board.squares, 2); i++) {
-				$("#" + i).text(board.grid[0].string)
-				board.grid.push(board.grid.shift());
-				}
-			$("#start-button").toggle();
-			$("#new-game").toggle();
+				for(i = 0; i < Math.pow(board.squares, 2); i++) {
+					$("#" + i).text(board.grid[0].string)
+					board.grid.push(board.grid.shift());
+					}
+				$("#new-game").toggle();
+				$("#file-input").toggle();
 			}
 		})
 }
-
 $(document).on('click','div.table-cell', function() {
 	$(this).toggleClass('glyphicon glyphicon-heart');
 	if ($(this).data('value') === 1) {
@@ -106,8 +105,11 @@ $(document).on('click','div.table-cell', function() {
 	}
 
 	$("button#new-game").click(function (){
+		debugger;
 	  $(".table-cell").text(' ');
 		$('div.table-cell').removeClass();
+		$("#new-game").toggle();
+		$("#file-input").toggle();
 	});
 });
 
